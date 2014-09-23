@@ -1,0 +1,50 @@
+body{
+	margin:0;
+}
+
+container{
+	width:100%;
+	height:100%;
+	box-sizing:border-box;
+	display:block;
+}
+
+container > nav{
+	display:block;
+	background-color:black;
+	height:50px;
+	width:100%;
+	position:relative;
+	box-sizing:border-box;
+	padding-top:9px;
+}
+
+container > nav > brand{
+	color:white;
+	font-size:26px;
+	font-weight:bold;
+	margin-left:24px;
+	float:left;
+}
+
+container > nav > ul{
+	float:left;
+	height:50px;
+	margin-top:-9px;
+	display: inline-block;
+	margin-left:30px;
+}
+container > nav > ul > li{
+	background-color:black;
+	height:100%;
+	box-sizing:border-box;
+	padding-top:10px;
+}
+container > nav > ul > li > a{
+	color:white;
+	text-decoration: none;
+	font-size:25px;
+}
+container > nav > ul > li > a:hover{
+	text-shadow: 1px 0.5px #ccc;
+}

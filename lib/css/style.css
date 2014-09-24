@@ -48,3 +48,16 @@ container > nav > ul > li > a{
 container > nav > ul > li > a:hover{
 	text-shadow: 1px 0.5px #ccc;
 }
+
+
+
+.inputBox{
+    background: white; 
+    border: 1px double #DDD; 
+    border-radius: 5px; 
+    box-shadow: 0 0 5px #333; 
+    color: #666; 
+    outline: none; 
+    height:25px; 
+    /*width: 275px; */
+}

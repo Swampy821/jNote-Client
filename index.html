@@ -4,13 +4,6 @@
 		<link rel='stylesheet' media='(max-width: 499px)' href='lib/css/style-sm.css'>
 		<link rel='stylesheet' media='(max-width: 800px) and (min-width: 500px)' href='lib/css/style-md.css'>
 		<link rel='stylesheet' media='(min-width: 801px)' href='lib/css/style-lg.css'>
-	    <script src='lib/angular/angular.min.js'></script>
-	    <script src='lib/angular/angular-route.min.js'></script>
-	    <script src='lib/js/app.js'></script>
-	    <script src='lib/js/routes.js'></script>
-	    <script src='lib/js/restUrls.js'></script>
-	    <script src='lib/js/controller.js'></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<container>
@@ -20,14 +13,15 @@
 					<li><a href='#/notes'>View Notes</a></li>
 				</ul>
 			</nav>
-
-		<div ng-view></div>
-
+			<main>
+				<div ng-view></div>
+			</main>
 
 
 
 
 		</container>
 	</body>
-	
+	<script src='lib/js/bundle/bundle.js'></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>

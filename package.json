@@ -1,0 +1,9 @@
+{
+  "name": "jNotes-client",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify":"*",  
+    "matchdep":"*" 
+  }
+}

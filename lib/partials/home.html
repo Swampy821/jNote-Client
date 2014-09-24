@@ -1,5 +1,11 @@
-<div ng-controller="Main">
-	Username: <input type='text' class='inputBox' data-username><br>
-	Password: <input type='password' class='inputBox' data-password><br>
-	<button>Login</button>
+<div ng-controller="home">
+	<loginBox>
+		<row>
+			Username: <input type='text' class='inputBox' ng-model='user.name'>
+		</row><row>
+			Password: <input type='password' class='inputBox' ng-model='user.pass'>
+		</row><row>
+			<submit class='btn loginBtn' ng-click='login()'>Login</submit>
+		</row>
+	</loginBox>
 </div>

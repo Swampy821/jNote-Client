@@ -1,4 +1,3 @@
 node_modules
-bundle/bundle.min.css
-bundle/bundle.min.js
+bundle/*.css
 lib/less.gen/*.css

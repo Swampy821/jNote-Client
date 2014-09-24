@@ -1,8 +1,15 @@
 <div ng-controller="notesMain">
-	<h1>Current Notes</h1>
-		<ul>
-			<li ng-repeat="item in test">
-			  {{item.title}} - {{item.description}}
-			</li>
-		</ul>
+	<noteContainer>
+		<noteList>
+			<ul>
+				<li class='title'>Notes</li>
+				<li ng-repeat="item in test" class='btn'> 
+				  {{item.title}}
+				</li>
+			</ul>
+		</noteList>
+		<note>
+			NOTES DATA BLAH BLAH BLAH BALH
+		</note>
+	</noteContainer>
 	</div>

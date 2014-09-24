@@ -32,6 +32,7 @@ module.exports = function (grunt) {
             'lib/bundle/bundle.min.js': [
                 'lib/angular/angular.min.js',
                 'lib/angular/angular-route.min.js',
+                'lib/angular/angular-cookies.min.js',
                 'lib/js/app.js',
                 'lib/js/routes.js',
                 'lib/js/objects.js',

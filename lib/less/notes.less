@@ -25,5 +25,27 @@ noteContainer{
 	& > note{
 		display:block;
 		width:75%;
+		& > noteTitle {
+			display: block;
+			width: 100%;
+			font-size: 26;
+			font-weight: bold;
+			padding-left: 35px;
+			text-decoration: underline;
+			margin-bottom: 25px;
+		}
+		& > noteDescription { 
+			padding-left: 35px;
+			font-size: 16px;
+		}
+		& > tools {
+			box-sizing: border-box;
+			display: block;
+			margin-top: 38px;
+			margin-bottom: 30px;
+			& > a.btn {
+				margin-left: 33px;
+			}
+		}
 	}
 }

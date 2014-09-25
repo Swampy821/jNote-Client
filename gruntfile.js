@@ -40,10 +40,15 @@ module.exports = function (grunt) {
             ]
           }
         }
+      },
+      watch: {
+        files: ['**/*.less', '**/*.js'],
+        tasks: ['less', 'uglify', 'cssmin']
       }
     });
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default', ['less', 'uglify', 'cssmin']);  
 };

@@ -3,13 +3,27 @@
 		<noteList>
 			<ul>
 				<li class='title'>Notes</li>
-				<li ng-repeat="item in test" class='btn'> 
+				<li ng-repeat="item in notes" class='btn' ng-click='view(item, $index)' ng-if='item.active'> 
 				  {{item.title}}
 				</li>
+				<li class='btn' ng-click='add()'>Add New Note</li>
 			</ul>
 		</noteList>
 		<note>
-			NOTES DATA BLAH BLAH BLAH BALH
+			<tools ng-if='main.active'>
+				<a class='btn' ng-click='edit()'>Edit</a><a class='btn' ng-click='remove()'>Delete</a>
+			</tools>
+			<noteTitle ng-if='!main.edit && !main.add'>
+				{{main.title}}
+			</noteTitle>
+			<noteDescription ng-if='!main.edit && !main.add'>
+				{{main.description}}
+			</noteDescription>
+			<noteEdit ng-if='main.edit || main.add'>
+
+				<a ng-if='main.edit' class='btn'>Edit Note</a>
+				<a ng-if='main.add' class='btn'>Add Note</a>
+			</noteEdit>
 		</note>
 	</noteContainer>
 	</div>

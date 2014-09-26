@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "*",
+    "grunt-contrib-htmlmin":"*",
     "grunt-contrib-uglify":"*",  
     "grunt-contrib-cssmin":"*",
     "grunt-contrib-less":"*",

@@ -1,3 +1,4 @@
 node_modules
-lib/bundle/*
-lib/less.gen/*.css
+dev/lib/bundle/*
+dev/lib/less.gen/*.css
+build

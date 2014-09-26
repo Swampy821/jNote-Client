@@ -1,4 +1,4 @@
 node_modules
-dev/lib/bundle/*
-dev/lib/less.gen/*.css
+dev/lib/bundle
+dev/lib/less.gen
 build

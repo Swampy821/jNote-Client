@@ -21,13 +21,14 @@
 			</noteDescription>
 			<noteEdit ng-if='main.edit || main.add'>
 				<addTitle ng-if='main.add'>Add Note</addTitle>
-				<titleInput><inputTitle>Title: </inputTitle><input type='text' class='inputBox'></titleInput>
+				<titleInput><inputTitle>Title: </inputTitle>
+				<input type='text' class='inputBox' ng-model='main.title'></titleInput>
 				<descriptionInput><inputDescription>
 					Description: </inputDescription>
-					<textarea class='inputBox'></textarea>
+					<textarea class='inputBox' ng-model='main.description'></textarea>
 				</descriptionInput>
 				<a ng-if='main.edit' class='btn'>Edit Note</a>
-				<a ng-if='main.add' class='btn'>Add Note</a>
+				<a ng-if='main.add' class='btn' ng-click='addNote()'>Add Note</a>
 			</noteEdit>
 		</note>
 	</noteContainer>

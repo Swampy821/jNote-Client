@@ -2,9 +2,11 @@ appControllers.controller('notesMain', function($scope, $http, $window, restUrls
 	if($cookies.auth!=='true') {
 		$window.location.href = "#/";
 	}
-	$http.get(restUrls.getNotes).success(function(data) {
-		$scope.notes = data;
-	});	
+	$scope.update = function() {
+		$http.get(restUrls.getNotes).success(function(data) {
+			$scope.notes = data;
+		});	
+	};
 	$scope.main = {
 		description:'',
 		title:'',
@@ -57,5 +59,16 @@ appControllers.controller('notesMain', function($scope, $http, $window, restUrls
 			add:true
 		};
 	};
+	$scope.addNote = function() {
+		$http.get(restUrls.addNote + $scope.main.title + '/' + $scope.main.description).success(function(data) {
+			console.log(data.id)
+		});	
+		this.update();
+		$scope.main.description = '';
+		$scope.main.title = '';
+		$scope.main.add = false;
+	}
+	$scope.update();
+
 
 });

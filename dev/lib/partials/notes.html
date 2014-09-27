@@ -27,7 +27,7 @@
 					Description: </inputDescription>
 					<textarea class='inputBox' ng-model='main.description'></textarea>
 				</descriptionInput>
-				<a ng-if='main.edit' class='btn'>Edit Note</a>
+				<a ng-if='main.edit' class='btn' ng-click='editNote()'>Edit Note</a>
 				<a ng-if='main.add' class='btn' ng-click='addNote()'>Add Note</a>
 			</noteEdit>
 		</note>

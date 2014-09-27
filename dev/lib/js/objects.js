@@ -5,7 +5,8 @@ app.factory('restUrls', function() {
 		getNotes: url + '/getNotes',
 		login: url + '/login',
 		removeNote: url + '/removeNote/',
-		addNote: url + '/addNote/'
+		addNote: url + '/addNote/',
+		editNote: url + '/editNote/'
 	};
 });
 

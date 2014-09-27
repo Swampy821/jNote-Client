@@ -61,13 +61,23 @@ appControllers.controller('notesMain', function($scope, $http, $window, restUrls
 	};
 	$scope.addNote = function() {
 		$http.get(restUrls.addNote + $scope.main.title + '/' + $scope.main.description).success(function(data) {
-			console.log(data.id)
+			
 		});	
 		this.update();
 		$scope.main.description = '';
 		$scope.main.title = '';
 		$scope.main.add = false;
-	}
+	};
+	$scope.editNote = function() {
+		$http.get(restUrls.editNote + $scope.main.index + '/' + $scope.main.title + '/' + $scope.main.description).success(function(data) {
+			if(data==='true') {
+				$scope.update();
+				$scope.main.edit = false;
+			}else{
+				alert('Something went wrong while trying to save.');
+			}
+		})
+	};
 	$scope.update();
 
 

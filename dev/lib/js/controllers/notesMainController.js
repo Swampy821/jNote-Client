@@ -60,13 +60,14 @@ appControllers.controller('notesMain', function($scope, $http, $window, restUrls
 		};
 	};
 	$scope.addNote = function() {
+		var self = this;
 		$http.get(restUrls.addNote + $scope.main.title + '/' + $scope.main.description).success(function(data) {
-			
+			self.update();
+			$scope.main.description = '';
+			$scope.main.title = '';
+			$scope.main.add = false;	
 		});	
-		this.update();
-		$scope.main.description = '';
-		$scope.main.title = '';
-		$scope.main.add = false;
+		
 	};
 	$scope.editNote = function() {
 		$http.get(restUrls.editNote + $scope.main.index + '/' + $scope.main.title + '/' + $scope.main.description).success(function(data) {
